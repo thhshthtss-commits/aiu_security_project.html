@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIU Secure Web App</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f0f2f5; }
+        .box { width: 350px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input { width: 90%; padding: 10px; margin: 5px 0; }
+        button { width: 97%; padding: 10px; cursor: pointer; border: none; border-radius: 4px; }
+        .reg { background: #e4e6eb; }
+        .log { background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Security Project</h2>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}{% for m in messages %}<p style="color:red; font-size:12px;">{{ m }}</p>{% endfor %}{% endif %}
+        {% endwith %}
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="reg">Register</button>
+        </form>
+        <hr>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit" class="log">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+    
