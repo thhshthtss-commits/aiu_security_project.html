@@ -1,8 +1,9 @@
+name: ismail khaled  id:22100198 
 # Secure Web Authentication & Penetration Testing Project
 **University:** Alamein International University (AIU)
 **Course:** Cybersecurity & Ethical Hacking
 ## 📝 Project Overview
-This project is a secure web application featuring a user registration and login system. It was developed to demonstrate best practices in **Secure Coding** and to test resilience against common web vulnerabilities.
+This projبect is a secure web application featuring a user registration and login system. It was developed to demonstrate best practices in **Secure Coding** and to test resilience against common web vulnerabilities.
 
 ## 🛡️ Implemented Security Features
 We have integrated multiple layers of defense to protect user data:
