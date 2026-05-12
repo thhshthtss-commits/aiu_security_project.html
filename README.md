@@ -1,35 +1,25 @@
+# Secure Web Authentication & Penetration Testing Project
+**University:** Alamein International University (AIU)
+**Course:** Cybersecurity & Ethical Hacking
+## 📝 Project Overview
+This project is a secure web application featuring a user registration and login system. It was developed to demonstrate best practices in **Secure Coding** and to test resilience against common web vulnerabilities.
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>AIU Secure Web App</title>
-    <style>
-        body { font-family: Arial; text-align: center; background: #f0f2f5; }
-        .box { width: 350px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        input { width: 90%; padding: 10px; margin: 5px 0; }
-        button { width: 97%; padding: 10px; cursor: pointer; border: none; border-radius: 4px; }
-        .reg { background: #e4e6eb; }
-        .log { background: #007bff; color: white; }
-    </style>
-</head>
-<body>
-    <div class="box">
-        <h2>Security Project</h2>
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}{% for m in messages %}<p style="color:red; font-size:12px;">{{ m }}</p>{% endfor %}{% endif %}
-        {% endwith %}
-        <form action="/register" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit" class="reg">Register</button>
-        </form>
-        <hr>
-        <form action="/login" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit" class="log">Login</button>
-        </form>
-    </div>
-</body>
-</html>
-    
+## 🛡️ Implemented Security Features
+We have integrated multiple layers of defense to protect user data:
+1. **Password Hashing:** Utilizing `bcrypt` to salt and hash passwords before storing them in the SQLite database.
+2. **SQL Injection (SQLi) Protection:** Using **Parameterized Queries** to prevent malicious database manipulation.
+3. **XSS Defense:** Implementing automatic HTML escaping and input sanitization.
+4. **Brute Force Protection:** Account lockout mechanism that triggers after **5 failed login attempts**.
+5. **Strong Password Policy:** Mandatory complexity requirements (Minimum 8 characters, including symbols and numbers).
+
+## 🛠️ Tech Stack
+- **Language:** Python
+- **Framework:** Flask
+- **Database:** SQLite
+- **Environment:** Google Colab
+
+## ⚖️ Ethical Statement
+> "All testing activities were conducted solely on our own application in accordance with ethical and legal guidelines."
+
+---
+© 2026 AIU Cybersecurity Team
